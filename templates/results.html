@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coffee Shop Locator Results</title>
+</head>
+<body>
+<h1>Coffee Shop Locator Results</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+<th>Distance</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+{% for coffee_shop in coffee_shops %}
+<tr>
+<td>{{ coffee_shop.name }}</td>
+<td>{{ coffee_shop.address }}</td>
+<td>{{ coffee_shop.distance }}</td>
+<td><a href="{{ coffee_shop.link }}">{{ coffee_shop.name }}</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</body>
+</html>
+
